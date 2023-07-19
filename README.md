@@ -1,0 +1,2 @@
+# VScode_LaTeX_configuration
+愉快地在VScode中编写TeX文档
