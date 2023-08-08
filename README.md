@@ -76,7 +76,7 @@ tex -v
 - 设置错误信息和警告信息的弹窗显示
 - 设置PDF预览样式等
 
-```JSON
+```JSON5
 // ========================================
     // latex-workshop其他配置
     // ========================================
@@ -107,7 +107,7 @@ tex -v
 
 编译工具通常为pdfLaTeX（英文文档）、XeLaTeX（中文文档）和bibTeX（参考文献）。使用latexmk编译可以避免使用上述工具处理交叉引用、参考文献和各种索引表时需要的多次编译过程，latexmk支持多种编译引擎（包括XeLaTeX和pdfLaTeX），可以根据文档内容自动编译。
 
-```JSON
+```JSON5
 // ========================================
     // 编译工具链配置，使用latexmk（注释中是不使用latexmk的方法）
     // 配置latex-workshop.latex.recipes和latex-workshop.latex.tools
@@ -168,7 +168,7 @@ tex -v
 
 使用latexindent格式化LaTeX代码。需要事先安装latexindent，详细的安装和使用方法参考[官方文档](https://latexindentpl.readthedocs.io/en/latest/sec-how-to-use.html)，一个简短的在Ubuntu安装latexindent的记录可以参考[我的博客](https://hilinxinhui.github.io/2023/07/24/Install-latexindent-pl/)。
 
-```JSON
+```JSON5
 // ========================================
     // 使用latexindent格式化LaTeX代码
     // 将latexindent的输出信息保存为log（保存到输出目录下）便于管理
