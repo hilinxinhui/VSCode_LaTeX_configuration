@@ -1,13 +1,12 @@
-# VSCode LaTeX configuration
+# VSCode LaTeX configuration {ignore=True}
 
 愉快地在VScode中编写TeX文档
 
-## Table of Contents
+## Table of Contents {ignore=True}
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=2 orderedList=false} -->
 
 <!-- code_chunk_output -->
-
 - [Background](#background)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -15,7 +14,6 @@
 - [Maintainer](#maintainer)
 - [Contributing](#contributing)
 - [LICENSE](#license)
-
 <!-- /code_chunk_output -->
 
 ## Background
@@ -78,29 +76,29 @@ tex -v
 
 ```JSON5
 // ========================================
-    // latex-workshop其他配置
-    // ========================================
+// latex-workshop其他配置
+// ========================================
 
-    // 鼠标悬停，预览公式时，支持 boldsymbol 宏
-    "latex-workshop.hover.preview.mathjax.extensions": [
-        "boldsymbol"
-    ],
-    // 是否启用 IntelliSense，自动补全引用的包中的环境和命令
-    "latex-workshop.intellisense.package.enabled": true,
-    // 编译后的文件输出目录
-    "latex-workshop.latex.outDir": "./tmp",
-    // 默认编译引擎为上次使用的
-    "latex-workshop.latex.recipe.default": "lastUsed",
-    // 预览复杂公式，使用时需要通过 command palette (命令面板) 打开
-    "latex-workshop.mathpreviewpanel.cursor.enabled": true,
-    // 不允许弹窗显示错误信息
-    "latex-workshop.message.error.show": false,
-    // 不允许弹窗显示警告信息
-    "latex-workshop.message.warning.show": false,
-    // 预览 PDF 时，反转颜色
-    "latex-workshop.view.pdf.invert": 1,
-    // 预览 PDF 时，自动检测是否需要反转颜色
-    "latex-workshop.view.pdf.invertMode.enabled": "auto",
+// 鼠标悬停，预览公式时，支持 boldsymbol 宏
+"latex-workshop.hover.preview.mathjax.extensions": [
+    "boldsymbol"
+],
+// 是否启用 IntelliSense，自动补全引用的包中的环境和命令
+"latex-workshop.intellisense.package.enabled": true,
+// 编译后的文件输出目录
+"latex-workshop.latex.outDir": "./tmp",
+// 默认编译引擎为上次使用的
+"latex-workshop.latex.recipe.default": "lastUsed",
+// 预览复杂公式，使用时需要通过 command palette (命令面板) 打开
+"latex-workshop.mathpreviewpanel.cursor.enabled": true,
+// 不允许弹窗显示错误信息
+"latex-workshop.message.error.show": false,
+// 不允许弹窗显示警告信息
+"latex-workshop.message.warning.show": false,
+// 预览 PDF 时，反转颜色
+"latex-workshop.view.pdf.invert": 1,
+// 预览 PDF 时，自动检测是否需要反转颜色
+"latex-workshop.view.pdf.invertMode.enabled": "auto",
 ```
 
 ### 编译工具链配置
@@ -109,59 +107,59 @@ tex -v
 
 ```JSON5
 // ========================================
-    // 编译工具链配置，使用latexmk（注释中是不使用latexmk的方法）
-    // 配置latex-workshop.latex.recipes和latex-workshop.latex.tools
-    // ========================================
+// 编译工具链配置，使用latexmk（注释中是不使用latexmk的方法）
+// 配置latex-workshop.latex.recipes和latex-workshop.latex.tools
+// ========================================
 
-    "latex-workshop.latex.recipes": [
-        // 第一个recipe是默认的编译工具
-        {
-            "name": "xelatex",
-            "tools": [
-                "xelatexmk"
-            ]
-        },
-        {
-            "name": "pdflatex",
-            "tools": [
-                "pdflatexmk"
-            ]
-        },
-    ],
+"latex-workshop.latex.recipes": [
+    // 第一个recipe是默认的编译工具
+    {
+        "name": "xelatex",
+        "tools": [
+            "xelatexmk"
+        ]
+    },
+    {
+        "name": "pdflatex",
+        "tools": [
+            "pdflatexmk"
+        ]
+    },
+],
 
-    "latex-workshop.latex.tools": [
-        // 编译工具和命令
-        {
-            "name": "xelatexmk",
-            "command": "latexmk",
-            // 或"command": "xelatex",
-            "env": {},
-            "args": [
-                "-synctex=1",
-                "-pdfxe",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-outdir=%OUTDIR%",
-                // "%DOC%"
-                "DOCFILE" // 将%DOC%替换为%DOCFILE%即可支持编译中文路径下的文件
-            ]
-        },
-        {
-            "name": "pdflatexmk",
-            "command": "latexmk",
-            // 或"command": "pdflatex",
-            "env": {},
-            "args": [
-                "-synctex=1",
-                "-pdf",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-outdir=%OUTDIR%",
-                // "%DOC%"
-                "DOCFILE" // 将%DOC%替换为%DOCFILE%即可支持编译中文路径下的文件
-            ]
-        },
-    ],
+"latex-workshop.latex.tools": [
+    // 编译工具和命令
+    {
+        "name": "xelatexmk",
+        "command": "latexmk",
+        // 或"command": "xelatex",
+        "env": {},
+        "args": [
+            "-synctex=1",
+            "-pdfxe",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-outdir=%OUTDIR%",
+            // "%DOC%"
+            "DOCFILE" // 将%DOC%替换为%DOCFILE%即可支持编译中文路径下的文件
+        ]
+    },
+    {
+        "name": "pdflatexmk",
+        "command": "latexmk",
+        // 或"command": "pdflatex",
+        "env": {},
+        "args": [
+            "-synctex=1",
+            "-pdf",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-outdir=%OUTDIR%",
+            // "%DOC%"
+            "DOCFILE" // 将%DOC%替换为%DOCFILE%即可支持编译中文路径下的文件
+        ]
+    },
+],
 ```
 
 ### 代码格式化配置
@@ -170,16 +168,16 @@ tex -v
 
 ```JSON5
 // ========================================
-    // 使用latexindent格式化LaTeX代码
-    // 将latexindent的输出信息保存为log（保存到输出目录下）便于管理
-    // ========================================
-    
-    "latex-workshop.latexindent.args": [
-        "-g",
-        "./%OUTDIR%/indent.log",
-        "%TMPFILE%",
-        "-y=defaultIndent: '%INDENT%'"
-    ],
+// 使用latexindent格式化LaTeX代码
+// 将latexindent的输出信息保存为log（保存到输出目录下）便于管理
+// ========================================
+
+"latex-workshop.latexindent.args": [
+    "-g",
+    "./%OUTDIR%/indent.log",
+    "%TMPFILE%",
+    "-y=defaultIndent: '%INDENT%'"
+],
 ```
 
 ### 配置文件
