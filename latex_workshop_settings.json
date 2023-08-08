@@ -98,8 +98,7 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-outdir=%OUTDIR%",
-                // "%DOC%"
-                "DOCFILE" // 将%DOC%替换为%DOCFILE%即可支持编译中文路径下的文件
+                "%DOC%"
             ]
         },
         {
@@ -113,8 +112,7 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-outdir=%OUTDIR%",
-                // "%DOC%"
-                "DOCFILE" // 将%DOC%替换为%DOCFILE%即可支持编译中文路径下的文件
+                "%DOC%"
             ]
         },
         // {
@@ -122,7 +120,7 @@
         //     "name": "bibtex",
         //     "command": "bibtex",
         //     "args": [
-        //         "%DOCFILE%" // 同上
+        //         "%DOC%"
         //     ]
         // }
     ],
